@@ -3,16 +3,63 @@
   <head>
     <meta charset="utf-8">
     <title>menu principale</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/darkly/bootstrap.css" integrity="sha256-sI9r5OJ+Pe8S/XYC/eO2EUp8TJRGG1TMDaPkJPlyFNo=" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Menu</h1>
-    <hr>
-    <ul>
-      <li><a href="hellas_verona_fabozzo.html">Hellas Verona</a></li>
-      <li><a href="orologio_digitale_fabozzo.html">orologio digitale</a></li>
-      <li><a href="robot_fabozzo.html">Robot</a></li>
-      <li><a href="soft_skills_fabozzo.html">Soft skills</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Menù</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  </body>
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hellas_verona_fabozzo.html">Hellas Verona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="orologio_digitale_fabozzo.html">orologio digitale</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="robot_fabozzo.html">Robot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="soft_skills_fabozzo.html">soft skills</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js" integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+     <script>
+        (function () {
+            'use strict';
+
+            $(window).scroll(function () {
+                var top = $(document).scrollTop();
+                if (top > 50) {
+                    $('#home > .navbar').removeClass('navbar-transparent');
+                } else {
+                    $('#home > .navbar').addClass('navbar-transparent');
+                }
+            })
+
+            $('a[href="#"]').click(function (event) {
+                event.preventDefault();
+            })
+
+            // $('.alert').alert()
+            // $('.carousel').carousel();
+            $('.bs-component [data-toggle="popover"]').popover();
+            $('.bs-component [data-toggle="tooltip"]').tooltip();
+            $('.bs-component [data-toggle="popover"]').popover();
+            // $('.bs-component .modal-dialog').modal();
+
+        })();
+    </script>
 </html>
